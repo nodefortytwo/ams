@@ -1,4 +1,0 @@
-ams
-===
-
-Application Management System
