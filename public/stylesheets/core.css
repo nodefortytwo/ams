@@ -1,0 +1,10 @@
+
+#outer{
+    width:850px;
+    margin:0 auto;
+}
+
+#inner{
+    width:850px;
+    float:left;
+}
