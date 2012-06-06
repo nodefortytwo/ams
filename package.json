@@ -1,5 +1,5 @@
 {
-    "name": "application management system"
+    "name": "ams"
   , "version": "0.0.1"
   , "private": true
   , "dependencies": {
