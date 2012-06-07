@@ -9,7 +9,7 @@ var app = module.exports = express.createServer();
 // Load configurations
 var config_file = require('yaml-config')
 exports = module.exports = config = config_file.readConfig('config/config.yaml')
-
+console.log(config);
 //load in any required data
 if(config.dataFile) {
     fs.readFile('./data/' + config.dataFile, function(err, data) {
@@ -37,7 +37,10 @@ app.configure('development', function() {
 });
 
 app.configure('production', function() {
-    app.use(express.errorHandler());
+    app.use(express.errorHandler({
+        dumpExceptions : true,
+        showStack : true
+    }));
 });
 
 app.use(function(req, res, next) {

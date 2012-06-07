@@ -4,17 +4,17 @@
         "logo": "uploads/logo.png",
         "text1" : "Welcome to the Plumen page, home of the world's first designer energy saving light bulb.",
         "text2": "Pleace like us if you to keep in touch with new products and ideas from Plumen.",
-        "link": "http://google.co.uk"
+        "link": ""
     },
     "left": {
         "image": "uploads/leftBg.png",
         "text": "Visit our Facebook photo albumns",
-        "link": "http://google.co.uk"
+        "link": "https://www.facebook.com/PlumenLighting/photos"
     },
     "right": {
         "image": "uploads/rightBg.png",
-        "text": "Visit the offical Plumen shop",
-        "link": "http://google.co.uk"
+        "text": "Visit the official Plumen shop",
+        "link": "http://ukshop.plumen.com/"
     }
 }
 

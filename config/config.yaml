@@ -1,7 +1,6 @@
 development:
   siteName: "Dev Plumen App"
   dataFile: "development.json"
-staging:
 production:
-  siteName: "Plumen App"
+  siteName: "Plumen: The designer low energy lightbulb"
   dataFile: "production.json"
