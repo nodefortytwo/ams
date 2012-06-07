@@ -3,8 +3,8 @@
  */
 
 exports.index = function(req, res) {
-    console.log(config);
     res.render('index', {
-        title : config.siteName
+        title : config.siteName,
+        data : config.data
     })
 };

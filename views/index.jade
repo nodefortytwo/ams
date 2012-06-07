@@ -1,11 +1,17 @@
 div#outer
     div#inner
-        div#hero
-            img(src="http://placekitten.com/810/300")
-            div#text
-        div#left
-            img(src="http://placekitten.com/395/315")
-            div#text
-        div#right
-            img(src="http://placekitten.com/395/315")
-            div#text
+        a#hero(href=data.hero.link, data-editable="true", data-editable-attr="href", data-editable-id="data.hero.link")
+            img(src=data.hero.image, width="810", height="300", data-editable="true", data-editable-attr="src", data-editable-id="data.hero.image")
+            div.text
+                strong= data.hero.text1
+                span= data.hero.text2
+                span.logo 
+                    img(src=data.hero.logo, width="127", height="29")
+        a#left(href=data.left.link)
+            img(src=data.left.image, width="395", height="315")
+            div.text
+                span= data.left.text
+        a#right(href=data.right.link)
+            img(src=data.right.image, width="395", height="315")
+            div.text
+                span= data.right.text

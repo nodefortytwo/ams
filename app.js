@@ -48,11 +48,11 @@ app.use(function(req, res, next) {
         return next();
  
     // --- Redirect to https
-    res.redirect("https://" + req.headers.host + req.url);
+    //res.redirect("https://" + req.headers.host + req.url);
 });
 // Routes
 
-app.post('/', routes.index);
+app.get('/', routes.index);
 
 app.listen(process.env.PORT, function() {
     console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
