@@ -4,3 +4,4 @@ development:
 staging:
 production:
   siteName: "Plumen App"
+  dataFile: "production.json"
