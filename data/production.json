@@ -3,12 +3,12 @@
         "image": "uploads/heroBg.png",
         "logo": "uploads/logo.png",
         "text1" : "Welcome to the Plumen page, home of the world's first designer energy saving light bulb.",
-        "text2": "Pleace like us if you to keep in touch with new products and ideas from Plumen.",
+        "text2": "Please like us if you want to keep in touch with new products and ideas from Plumen.",
         "link": "http://plumen.com"
     },
     "left": {
         "image": "uploads/leftBg.png",
-        "text": "Visit our Facebook photo albumns",
+        "text": "Visit our Facebook photo albums",
         "link": "https://www.facebook.com/PlumenLighting/photos"
     },
     "right": {
