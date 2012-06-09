@@ -54,6 +54,8 @@ app.use(function(req, res, next) {
 
 app.get('/', routes.index);
 app.post('/', routes.index);
+app.get('/config', routes.getConfig);
+app.post('/config/save', routes.saveConfig);
 
 app.listen(process.env.PORT, function() {
     console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);

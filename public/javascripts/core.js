@@ -1,6 +1,10 @@
 $(document).ready(function() {
-    //editableInit();
-    //$('body').prepend('<div id="edit-window"><h1>Edit</h1><form></form></div>');
+    $('.edit').click(function() {
+        $.ajax('config').done(function(res) {
+            edit(JSON.parse(res));
+        });
+        return false;
+    });
 });
 function editableInit() {
     var editableItems = $('[data-editable="true"]');
@@ -22,27 +26,45 @@ function editableInit() {
     });
 }
 
-function edit(item) {
-    var id = $(item).attr('data-editable-id');
-    var attrs = $(item).attr('data-editable-attr').split(',');
-    if($(item).attr('data-editable-types')) {
-        var types = $(item).attr('data-editable-types').split(',');
-    }
+function edit(data) {
     var html = '';
-    for(var i = 0; i < attrs.length; i++) {
-        html += '<label for="' + attrs[i] + '">' + attrs[i] + '</label>';
-        html += '<input type="text" name="' + attrs[i] + '" id="' + attrs[i] + '"/>';
+    for(section in data) {
+        html += '<div id="' + section + '" class="section">';
+        html += '<h2>' + section + '</h2>';
+        for(field in data[section]) {
+            var id = section + '.' + field;
+            html += '<div id="' + id + '" class="field">';
+            html += '<label for="' + id + '">' + field + '</label>';
+            html += '<input type="text" name="' + id + '" id="' + id + '" value="' + data[section][field] + '"/>';
+            html += '</div>';
+        }
+        html += '</div>';
     }
-    var submit = $('<input type="submit" value="Submit" class="submit"/>').click(function() {
-        $(this).parent('form').children('input').each(function(){
-            if($(this).attr('type') != 'submit'){
-                $(item).attr($(this).attr('name'), $(this).val());
-            }
-        })
-        $('#edit-window').slideUp();
+    var submit = $('<a href="#" class="submit">save</a>').click(function(){
+        save(data);
         return false;
-    });
+        });
     $('#edit-window form').html(html);
     $('#edit-window form').append(submit);
     $('#edit-window').slideDown();
+}
+
+function save(data) {
+    
+    $('#edit-window form input').each(function() {
+        var id = $(this).attr('id').split('.');
+        data[id[0]][id[1]] = $(this).val();
+    });
+    
+    $.ajax({
+      type: 'POST',
+      url: 'config/save',
+      data: data,
+      success: function(){
+          alert('dun');
+      },
+      dataType: 'JSON'
+    });
+    
+    console.log(data);
 }

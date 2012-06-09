@@ -68,20 +68,8 @@ label{
     width:365px;
 }
 
-.edit{
-    display:block;
-    background-color: rgba(0,0,0,.7);
-    width:50px;
-    position: absolute;
-    text-align: center;
-    padding:5px 5px;
-    color:white;
-    display:none;
-}
-
 #edit-window{
     width:470px;
-    height:200px;
     position:fixed;
     background:#efefef;
     border:1px solid #ccc;
@@ -98,3 +86,47 @@ label{
     clear:both;
     display:block;
 }
+
+#edit-window .section{
+    clear:both;
+    float:left;
+    width:100%;
+    padding:10px 0;
+    margin-bottom:5px;
+    border-bottom:1px solid #ccc;
+}
+
+#edit-window .field{
+    padding:5px;
+    clear:both;
+}
+
+#edit-window label{
+    width:50px;
+    display:block;
+    float:left;
+}
+
+#edit-window input{
+    display:block;
+    float:left;
+    width:390px;
+}
+#edit-window .submit{
+    width:100px;
+    float:right;
+    display:block;
+    padding:3px 5px;
+    border:1px solid #ccc;
+    color:black;
+    text-align:center;
+    text-decoration:none;
+}
+#footer{
+    float:left;
+    clear:both;
+}
+#footer a.edit{
+    color:black;
+}
+

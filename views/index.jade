@@ -1,12 +1,13 @@
 div#outer
     div#inner
-        a#hero(href=data.hero.link, data-editable="true", data-editable-attr="href", data-editable-id="data.hero.link")
-            img(src=data.hero.image, width="810", height="300", data-editable="true", data-editable-attr="src", data-editable-id="data.hero.image")
+        div#hero
+            img(src=data.hero.image, width="810", height="300")
             div.text
                 strong= data.hero.text1
                 span= data.hero.text2
                 span.logo 
-                    img(src=data.hero.logo, width="127", height="29")
+                    a(href=data.hero.link)
+                        img(src=data.hero.logo, width="127", height="29")
         a#left(href=data.left.link)
             img(src=data.left.image, width="395", height="315")
             div.text
@@ -15,3 +16,5 @@ div#outer
             img(src=data.right.image, width="395", height="315")
             div.text
                 span= data.right.text
+        div#footer
+            
