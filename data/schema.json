@@ -1,0 +1,42 @@
+{
+    "hero": {
+        "image": {
+            "type": "file"
+        },
+        "logo": {
+            "type": "file"
+        },
+        "text1": {
+            "type": "text"
+        },
+        "text2": {
+            "type": "text"
+        },
+        "link": {
+            "type": "file"
+        }
+    },
+    "left": {
+        "image": {
+            "type": "file"
+        },
+        "text": {
+            "type": "text"
+        },
+        "link": {
+            "type": "text"
+        }
+    },
+    "right": {
+        "image": {
+            "type": "file"
+        },
+        "text": {
+            "type": "text"
+        },
+        "link": {
+            "type": "text"
+        }
+    }
+}
+

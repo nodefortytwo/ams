@@ -13,3 +13,7 @@ results
 
 node_modules
 npm-debug.log
+
+data/development.json
+data/production.json
+data/staging.json
