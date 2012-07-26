@@ -1,12 +1,12 @@
 div#outer
     div#inner
         div#hero
-            img(src=data.hero.image, width="810", height="300")
-            div.text
-                strong= data.hero.text1
-                span= data.hero.text2
-                span.logo 
-                    a(href=data.hero.link, target="_parent")
+            a(href=data.hero.link, target="_parent")
+                img(src=data.hero.image, width="810", height="300")
+                div.text
+                    strong= data.hero.text1
+                    span= data.hero.text2
+                    span.logo 
                         img(src=data.hero.logo, width="127", height="29")
         a#left(href=data.left.link, target="_parent")
             img(src=data.left.image, width="395", height="315")
