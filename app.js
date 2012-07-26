@@ -17,6 +17,11 @@ if(config.dataFile) {
             throw err;
         config.data = JSON.parse(data);
     });
+    fs.readFile('./data/schema.json', function(err, data) {
+        if(err)
+            throw err;
+        config.schema = JSON.parse(data);
+    });
 }
 
 // Configuration

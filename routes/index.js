@@ -11,7 +11,13 @@ exports.index = function(req, res) {
 };
 
 exports.getConfig = function(req, res) {
-    res.end(JSON.stringify(config.data))
+    
+    var response = {
+        "data" : config.data,
+        "schema" : config.schema    
+    };
+    
+    res.end(JSON.stringify(response))
 };
 
 exports.saveConfig = function(req, res) {
